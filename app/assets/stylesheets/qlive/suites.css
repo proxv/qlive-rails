@@ -1,0 +1,13 @@
+/*
+ *= require_tree ./suites
+ *= require_self
+ */
+
+#qunit-tests li.fail li {
+  list-style: none;
+}
+
+#qunit-tests ol li a.test-page-link {
+  text-decoration: underline;
+  color: #333;
+}
