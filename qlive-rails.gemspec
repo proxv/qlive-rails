@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = "Ruby on Rails engine for running qunit javascript tests using server-side factories and user login"
   s.description = s.summary
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["Rakefile", "README.md"]
+  s.files = Dir["{app,config,db,lib,public}/**/*"] + ["Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "qlive", '~> 0.1'
