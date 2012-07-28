@@ -7,8 +7,8 @@ module Qlive
 
     initializer "qlive" do |app|
       Qlive.setup[:base_path] ||= "#{Rails.root}/spec/qunits"
-
-      puts "Mounting Qlive::Rack to allow qunit testing against your server's backend. (Never use this rack on production systems.)"
+      Qlive.setup[:logger] ||= Rails.logger
+      Qlive.logger.warn "Mounting Qlive::Rack to enable qunit testing against server's backend. (Do not use this on production systems.)"
       if Qlive.setup[:hand_mounted]
         Qlive.setup[:hand_mounted].call
       else
