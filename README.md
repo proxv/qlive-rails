@@ -15,15 +15,11 @@ It is mainly intended to be used for testing javascript-heavy, single-page web a
 ## Benefits:
 
 * Precisely set fixture content and user login state for your qunit tests
-* Run the same tests in a browser or headlessly, alongside your normal integration test suite. (with the [qlive-headless](https://github.com/proxv/qlive-headless) gem)
+* Run the same tests both in a browser or headlessly, alongside your normal integration test suite. (with the [qlive-rspec](https://github.com/proxv/qlive-rspec) gem)
 * A dashboard page to link to all of your qlive test suites
 
 
 ## Installation
-
-To run qlive headlessly as well as in the browser, use [qlive-headless](https://github.com/proxv/qlive-headless).
-
-For browser-only testing against Ruby on Rails 3, do the following:
 
 * Add qlive-rails to your Gemfile:
 
@@ -41,6 +37,10 @@ For browser-only testing against Ruby on Rails 3, do the following:
       mount Qlive::Engine => '/qlive'
     end
     ```
+
+
+
+For running qlive headlessly using rspec, take a look at [qlive-rspec](https://github.com/proxv/qlive-rspec).
 
 
 ## Usage

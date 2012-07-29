@@ -2,6 +2,6 @@
 #require 'qlive/headless/dsl'
 #require 'qlive/headless/runner'
 
-module Qlive
+module QliveRails
 
 end

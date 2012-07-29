@@ -1,21 +1,24 @@
 $:.push File.expand_path("../lib", __FILE__)
 
-require "qlive/version"
+require "qlive-rails/version"
 
-Gem::Specification.new do |s|
-  s.name        = "qlive-rails"
-  s.version     = Qlive::VERSION
-  s.authors     = ["ProxV"]
-  s.email       = ["support@proxv.com"]
-  s.homepage    = "https://github.com/proxv/qlive-rails/"
-  s.summary     = "Ruby on Rails engine for running qunit javascript tests using server-side factories and user login"
-  s.description = s.summary
+Gem::Specification.new do |gem|
+  gem.name        = "qlive-rails"
+  gem.version     = QliveRails::VERSION
+  gem.authors     = ["ProxV"]
+  gem.email       = ["support@proxv.com"]
+  gem.homepage    = "https://github.com/proxv/qlive-rails/"
+  gem.summary     = "Ruby on Rails engine for running qunit javascript tests using server-side factories and user login"
+  gem.description = gem.summary
 
-  s.files = Dir["{app,config,db,lib,public}/**/*"] + ["Rakefile", "README.md"]
-  s.test_files = Dir["test/**/*"]
+  gem.files = Dir["{app,config,db,lib,public}/**/*"] + ["Rakefile", "README.md"]
+  gem.test_files = Dir["test/**/*"]
 
-  s.add_dependency "qlive", '~> 0.1'
-  s.add_dependency "rails", "~> 3.2"
-  s.add_development_dependency "rspec-rails", "~> 2.8.0"
+  gem.add_dependency "qlive", '~> 0.1.1'
+  gem.add_dependency "rails", "~> 3.2"
+  gem.add_dependency 'haml-rails'
+  gem.add_dependency 'sass-rails'
+  gem.add_development_dependency "rspec-rails", "~> 2.8.0"
+  gem.add_development_dependency "factory_girl_rails", "~> 3.5.0"
 
 end
