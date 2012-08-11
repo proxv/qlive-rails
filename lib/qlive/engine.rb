@@ -15,7 +15,7 @@ module Qlive
         app.middleware.insert_after(::ActionDispatch::ParamsParser, Qlive::Rack, {
           :base_path => Qlive.setup[:base_path]
         })
-        app.middleware.insert_after ::ActionDispatch::Static, ::ActionDispatch::Static, "#{root}/public"
+        app.middleware.insert_before(::Rack::Lock, ::ActionDispatch::Static, "#{root}/public")
       end
 
       if Qlive.setup[:gem_dev_mode]
